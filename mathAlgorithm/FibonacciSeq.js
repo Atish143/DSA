@@ -1,10 +1,9 @@
-// Give a number n find the first n  elements of the fibonacci sequnce
+// Give a number n find the first n  elements of the Fibonacci sequnce
 
-function fibonacci(n) {
+function Fibonacci(n) {
     let fib = [0,1]
     for(let i = 2 ; i < n ; i++){
         fib[i] = fib[i - 1]  + fib[i-2]
-    
     }
     if(n === 0 || n === 1){
         return n
@@ -17,4 +16,4 @@ function fibonacci(n) {
 
 // O(n) linear time complexity 
 
-console.log(fibonacci(10))
+console.log(Fibonacci(10))

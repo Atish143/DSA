@@ -1,0 +1,97 @@
+Hello LinkedIn! 👋
+
+
+
+🚀 Day 7 of My #100DaysOfDSA Journey! 🚀
+
+
+
+Today, I explored a fascinating concept in programming: Recursion! 🌀
+
+
+
+
+
+🔍 What is Recursion?
+
+Recursion is a technique where a function calls itself to break down a problem into smaller subproblems until it reaches a base case (a stopping condition).
+
+
+
+
+
+📌 Why Do We Need Recursion?
+
+✅ Solves problems naturally that involve repetitive structures (e.g., trees, graphs, factorial, Fibonacci).
+
+✅ Makes code shorter and cleaner for problems with nested or hierarchical data.
+
+✅ Used in divide and conquer approaches (e.g., QuickSort, MergeSort).
+
+
+
+
+
+📖 Real-Life Example: Counting Students in a School
+
+Imagine the Principal wants to find out how many students are in the school. Instead of counting all students directly, they ask two Professors. Each Professor then asks two Teachers in their department. Finally, each Teacher counts their students and reports back.
+
+
+
+
+
+📌 Breakdown of Student Count:
+
+Teacher 1 → 50 students
+
+Teacher 2 → 50 students
+
+Professor A receives 50 + 50 = 100 students
+
+Teacher 3 → 45 students
+
+Teacher 4 → 55 students
+
+Professor B receives 45 + 55 = 100 students
+
+Principal receives 100 + 100 = 200 students 
+
+
+
+✅This is exactly how Recursion works—a problem is broken down into smaller problems until the base case is reached, and results are combined back up!
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+🔹 If we divide the problem into smaller parts, recursion helps simplify it.
+
+🔹 In hierarchical structures (trees, graphs), recursion is often more intuitive than loops.
+
+🔹 The time complexity depends on the depth of recursion; in this case, it is O(n) since each teacher reports once.
+
+
+
+
+
+💡 Key Takeaways
+
+✔ Recursion helps solve complex problems by breaking them into smaller parts.
+
+✔ It is widely used in trees, graphs, and divide-and-conquer algorithms.
+
+✔ Understanding recursion improves problem-solving skills in coding interviews!
+
+
+
+
+
+Hope this makes recursion easier to understand! Let’s keep learning. 🚀
+
+
+
+
+
+#100DaysOfDSA #Recursion #JavaScript #Coding #Tech #DataStructures #Learning

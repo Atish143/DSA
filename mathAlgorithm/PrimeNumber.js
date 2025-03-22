@@ -18,3 +18,6 @@ function isPrime(n){
 // O(n) - linear time complexity 
 
 console.log(isPrime(5))
+
+
+

@@ -1,0 +1,107 @@
+Hello LinkedIn! 👋
+
+
+
+🚀 Day 6 of My #100DaysOfDSA Journey! 🚀
+
+
+
+Today, I explored an important concept in mathematics and programming: Prime Numbers!
+
+
+
+
+
+🤔 What is a Prime Number?
+
+A prime number is a natural number greater than 1 that has only two factors: 1 and itself.
+
+
+
+
+
+📌 Examples:
+
+ ✔ 2 → ✅ (Prime)
+
+ ✔ 3 → ✅ (Prime)
+
+ ✔ 5 → ✅ (Prime)
+
+ ❌ 4 → ❌ (Not Prime, since 4 = 2 × 2)
+
+ ❌ 6 → ❌ (Not Prime, since 6 = 2 × 3)
+
+
+
+
+
+🛠️ JavaScript Code to Check for Prime Number
+
+function isPrime(n) {
+
+    if (n < 2) {
+
+        return false;  // Prime numbers start from 2
+
+    }
+
+    for (let i = 2; i < n; i++) {
+
+        if (n % i === 0) {  // If n is divisible by any number other than 1 and itself, it's not prime
+
+            return false;
+
+        }
+
+    }
+
+    return true;
+
+}
+
+console.log(isPrime(5));  // Output: true
+
+console.log(isPrime(4));  // Output: false
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+🔵 For each number n, we check all numbers from 2 to n-1
+
+If n = 10, we check 2, 3, 4, ..., 9
+
+If n = 100, we check 2, 3, 4, ..., 99
+
+ 📌 Since we loop through n numbers, the time complexity is O(n) (Linear Time Complexity).
+
+🔹 This is not the most efficient way!
+
+🔹 We can optimize it to O(√n) by checking up to √n instead of n-1 (More on that later 😉).
+
+
+
+
+
+💡 Key Takeaways
+
+✔ Prime numbers are fundamental in cryptography & security (e.g., RSA encryption).
+
+✔ Checking for primes is useful in algorithmic problem-solving & optimization.
+
+✔ Current approach is O(n), but we can optimize it further!
+
+
+
+
+
+Hope this helps! Let’s keep learning. 🚀
+
+
+
+
+
+#100DaysOfDSA #BigO #JavaScript #PrimeNumbers #LinearComplexity #Coding #Learning #Tech

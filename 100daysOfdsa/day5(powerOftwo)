@@ -1,0 +1,101 @@
+Hello LinkedIn! 👋
+
+
+
+🚀 Day 5 of My #100DaysOfDSA Journey! 🚀
+
+
+
+Today, I explored a simple but interesting problem: Checking if a number is a Power of 2!
+
+
+
+🤔 What does "Power of 2" mean?
+
+A number is a power of 2 if you can keep dividing it by 2 until you reach 1, without any remainder.
+
+
+
+
+
+📌 Examples:
+
+ ✔ 8 → 8 → 4 → 2 → 1 ✅ (Power of 2)
+
+ ✔ 16 → 16 → 8 → 4 → 2 → 1 ✅ (Power of 2)
+
+ ❌ 10 → 10 → 5 (not divisible by 2) ❌ (Not a power of 2)
+
+
+
+
+
+🛠️ JavaScript Code to Check Power of 2
+
+function isPowerOfTwo(n) {
+
+    if (n < 1) {
+
+        return false;  // Negative numbers & 0 are not power of 2
+
+    }
+
+    while (n > 1) {
+
+        if (n % 2 !== 0) {  // If remainder is not 0, it's not power of 2
+
+            return false;
+
+        }
+
+        n = n / 2;  // Keep dividing by 2
+
+    }
+
+    return true;
+
+}
+
+console.log(isPowerOfTwo(8));  // Output: true
+
+console.log(isPowerOfTwo(10)); // Output: false
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+🔵 How many times do we divide n by 2?
+
+If n = 8, we divide 3 times → 8 → 4 → 2 → 1
+
+If n = 16, we divide 4 times → 16 → 8 → 4 → 2 → 1
+
+If n = 32, we divide 5 times → 32 → 16 → 8 → 4 → 2 → 1
+
+Since we keep dividing n by 2, the time complexity is O(log n) (Logarithmic Time Complexity).
+
+
+
+
+
+💡 Simple Takeaways
+
+✔ Logarithmic time complexity is faster than linear (O(n)).
+
+✔ Checking power of 2 is useful in memory allocation, game development, and optimization techniques.
+
+✔ The approach reduces n step-by-step, making it efficient.
+
+
+
+
+
+Hope this helps! Let’s keep learning. 🚀
+
+
+
+
+
+#100DaysOfDSA #BigO #JavaScript #PowerOfTwo #LogarithmicComplexity #Coding #Learning #Tech

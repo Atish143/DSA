@@ -1,0 +1,70 @@
+Hello LinkedIn! 👋
+🚀 Day 1 of My hashtag#100DaysOfDSA Journey! 🚀
+
+I’ve decided to challenge myself with 100 days of nonstop DSA learning! Each day, I’ll share something new I learn—whether it's new for you or not, it’s new for me!
+
+This isn’t a "Lemmen to Pro" journey, but let’s see what an average Maharashtra Board student can achieve in 100 days. If I can learn something valuable, maybe others like me can too! Let’s begin! 💪
+
+📌 What is DSA?
+DSA = Data Structure + Algorithm
+Data Structure 📊 → A way to organize and structure data.
+Algorithm ⚙️ → A step-by-step process to manipulate or process the structured data.
+
+⏳ Time & Space Complexity
+Time Complexity 🕒 → The amount of time an algorithm takes to run based on input size.
+Space Complexity 💾 → The amount of memory an algorithm needs to execute.
+
+📈 Asymptotic Notations
+1️⃣ Big O Notation (O-notation) → Worst Case 🔴
+2️⃣ Omega Notation (Ω-notation) → Best Case 🟢
+3️⃣ Theta Notation (Θ-notation) → Average Case 🟡
+
+🔍 How to Identify the Complexity?
+function SumOfNaturalNumbers(n){
+ let sum = 0;   // O(1)
+ for(let i = 0; i <= n; i++){
+ sum += i;   // O(n)
+ }
+ return sum;    // O(1)
+}
+👉 Time Complexity: O(n) (Linear Complexity)
+
+⏳ Common Complexities
+O(1) → Constant Time ⚡ (No loops, direct computation)
+O(n) → Linear Time 📈 (Single loop)
+O(n²) → Quadratic Time 🔄🔄 (Nested loops)
+O(n³) → Cubic Time 🔄🔄🔄 (Three nested loops)
+O(log n) → Logarithmic Time 📉 (Efficient algorithms)
+
+🚀 Big O Complexity hashtag#CheatSheet
+
+🔹 O(1) - Constant Time ⚡
+ ✅ No loops, direct computation
+ 📌 Example: Accessing an array element arr[0]
+
+🔹 O(n) - Linear Time 📈
+ ✅ Single loop
+ 📌 Example: Iterating through an array
+
+🔹 O(n²) - Quadratic Time 🔄🔄
+ ✅ Two nested loops
+ 📌 Example: Checking all pairs in an array
+
+🔹 O(n³) - Cubic Time 🔄🔄🔄
+ ✅ Three nested loops
+ 📌 Example: Checking all triplets in an array
+
+🔹 O(log n) - Logarithmic Time 📉
+ ✅ Dividing the problem in half each step
+ 📌 Example: Binary Search
+
+
+🔄 Day 1 Recap:
+✅ What is DSA?
+✅ What is Time & Space Complexity?
+✅ Understanding Big O, Omega, and Theta Notations
+✅ How to find the complexity of a function?
+This is just the beginning! Let’s see what I can learn in the next 99 days! Stay tuned! 🚀
+
+
+hashtag#100DaysOfDSA hashtag#DataStructures hashtag#Algorithms hashtag#Learning hashtag#CodeNewbie hashtag#TechJourney hashtag#BigONotation hashtag#DSAForBeginners

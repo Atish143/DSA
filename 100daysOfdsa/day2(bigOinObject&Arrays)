@@ -1,0 +1,88 @@
+Hello LinkedIn! 👋
+
+🚀 Day 2 of My #100DaysOfDSA Journey! 🚀
+
+
+
+Today's Topic :
+
+📌 Big O for Objects & Arrays in JavaScript
+
+
+
+🟢 Objects in JavaScript
+
+const person = {
+
+    firstName: "Atish",
+
+    lastName: "Dussa"
+
+};
+
+✅ Objects are great for fast lookups & modifications!
+
+
+
+🔍 Access (obj.key) → O(1) (Direct lookup)
+
+➕ Insertion (obj.newKey = value) → O(1) (Adds instantly)
+
+❌ Deletion (delete obj.key) → O(1) (Removes without shifting)
+
+🔎 Search (Object.values(obj).includes(value)) → O(n) (Needs to check all     values)
+
+🔄 Iteration (for...in, Object.keys(obj)) → O(n) (Loops through all keys)        
+
+
+
+
+
+
+
+🔵 Arrays in JavaScript
+
+const oddNumbers = [1, 3, 5, 7, 9, 11];
+
+✅ Arrays are best for ordered data but modifying the start is costly!
+
+
+
+🔍 Access (arr[index]) → O(1) (Instant lookup)
+
+➕ Insert at End (arr.push(x)) → O(1) (No shifting required)
+
+➕ Insert at Start (arr.unshift(x)) → O(n) (Moves all elements)
+
+❌ Remove from End (arr.pop()) → O(1) (Just removes last element)
+
+❌ Remove from Start (arr.shift()) → O(n) (Shifts all elements)
+
+🔎 Search (arr.includes(x)) → O(n) (Needs to check each item)
+
+🔄 Iteration (forEach, map) → O(n) (Loops through all elements)         
+
+
+
+
+
+
+
+💡 Key Takeaways
+
+✔ Use Objects when you need quick lookups & modifications.
+
+✔ Use Arrays when ordering matters & accessing elements by index.
+
+✔ Avoid inserting/deleting from the start of an array if performance is a concern.
+
+
+
+🔥 Hope this helps! Let’s keep learning. 🚀
+
+
+
+
+
+#100DaysOfDSA #BigO #JavaScript #DataStructures #Coding #Learning #Tech
+

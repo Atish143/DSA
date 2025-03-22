@@ -1,0 +1,81 @@
+Hello LinkedIn! 👋
+
+
+
+🚀 Day 3 of My #100DaysOfDSA Journey! 🚀
+
+
+
+Today, I explored Factorial Calculation in JavaScript. Let me explain it in the simplest way possible.
+
+
+
+🤔 What is Factorial?
+
+Factorial of a number n (written as n!) is the product of all numbers from 1 to n.
+
+
+
+📌 Example:
+
+factorial(3) = 3 × 2 × 1 = 6
+
+factorial(5) = 5 × 4 × 3 × 2 × 1 = 120
+
+It’s like counting all possible ways to arrange n things.
+
+
+
+🛠️ How Do We Calculate Factorial in Code?
+
+
+
+Let’s write a simple function in JavaScript:
+
+function factorial(n) {
+
+    let fac = 1;  // Start with 1
+
+    for (let i = 1; i <= n; i++) {  // Loop from 1 to n
+
+        fac = fac * i;  // Multiply each number
+
+    }
+
+    return fac; // Return the result
+
+}
+
+console.log(factorial(3)); // Output: 6
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+🟢 We are using a loop that runs from 1 to n, meaning:
+
+If n = 3, loop runs 3 times
+
+If n = 100, loop runs 100 times
+
+Since the time taken grows as n increases, we say Time Complexity = O(n) (Linear Time Complexity).
+
+
+
+💡 Simple Takeaways
+
+✔ Factorial grows super fast! A small number can give a huge result.
+
+✔ Used in permutations, probability, and solving puzzles.                          ✔ O(n) means as n increases, the number of operations increases linearly.
+
+
+
+
+
+Hope this makes sense! Let’s keep learning. 🚀
+
+
+
+#100DaysOfDSA #BigO #JavaScript #Factorial #TimeComplexity #Coding #Learning #Tech

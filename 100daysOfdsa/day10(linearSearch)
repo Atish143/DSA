@@ -1,0 +1,109 @@
+Hello LinkedIn! 👋
+
+
+
+🚀 Day 10 of My #100DaysOfDSA Journey! 🚀
+
+
+
+
+
+Today, I explored Linear Search – one of the simplest searching algorithms! 🔍
+
+
+
+
+
+📌 What is Linear Search?
+
+Linear Search is a basic search technique where we check each element one by one until we find the target.
+
+
+
+
+
+🔹 Example:
+
+ Imagine searching for a friend’s name in a long list of contacts. You start from the first name and go one by one until you find the correct one.
+
+
+
+
+
+🛠️ Linear Search in JavaScript
+
+function LinearSearch(arr, target) {
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] === target) {
+
+            return i;  // Return the index if the target is found
+
+        }
+
+    }
+
+    return -1;  // Return -1 if the target is not found
+
+}
+
+console.log(LinearSearch([10, 20, 30, 40], 40)); // Output: 3
+
+
+
+
+
+
+
+🧐 How Does This Work? (Step-by-Step)
+
+For arr = [10, 20, 30, 40] and target = 40, the function:
+
+ 1️⃣ Checks arr[0] → 10 (Not a match)
+
+ 2️⃣ Checks arr[1] → 20 (Not a match)
+
+ 3️⃣ Checks arr[2] → 30 (Not a match)
+
+ 4️⃣ Checks arr[3] → 40 (Match found! Returns index 3) ✅
+
+
+
+
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+Best Case (O(1)) → If the target is found at the first position.
+
+Worst Case (O(n)) → If the target is at the last position or not in the array.
+
+Average Case (O(n)) → On average, we check half of the elements before finding the target.
+
+💡 Linear Search is simple but inefficient for large datasets.
+
+💡 Key Takeaways
+
+✔ Works on both sorted & unsorted arrays.
+
+✔ Easy to implement but slow for large datasets.
+
+✔ For large datasets, use more efficient search algorithms like Binary Search.
+
+
+
+
+
+Let’s keep learning! 🚀
+
+
+
+
+
+
+
+#100DaysOfDSA #LinearSearch #JavaScript #Coding #Tech #DataStructures

@@ -1,0 +1,107 @@
+Hello LinkedIn! 👋
+
+
+
+🚀 Day 9 of My #100DaysOfDSA Journey! 🚀
+
+
+
+
+
+Today, I explored Recursion in Factorial Calculation! 🌀
+
+📌 What is Factorial?
+
+Factorial of a number n (denoted as n!) is the product of all positive integers from 1 to n.
+
+
+
+
+
+🔹 Example:
+
+3! = 3 × 2 × 1 = 6
+
+5! = 5 × 4 × 3 × 2 × 1 = 120
+
+Factorial is widely used in combinatorics, probability, and mathematical computations!
+
+
+
+
+
+🛠️ Recursive Solution for Factorial in JavaScript
+
+function RecursionFactorial(n) {
+
+    if (n === 0) {
+
+        return 1;  // Base case: 0! = 1
+
+    }
+
+    return n * RecursionFactorial(n - 1);
+
+}
+
+console.log(RecursionFactorial(5));  // Output: 120
+
+
+
+
+
+
+
+🧐 How Does This Work? (Breaking it Down)
+
+Each function call multiplies n by the result of the function called on (n - 1), until it reaches the base case n === 0:
+
+RecursionFactorial(5) 
+
+= 5 * RecursionFactorial(4)  
+
+= 5 * (4 * RecursionFactorial(3))  
+
+= 5 * (4 * (3 * RecursionFactorial(2)))  
+
+= 5 * (4 * (3 * (2 * RecursionFactorial(1))))  
+
+= 5 * (4 * (3 * (2 * (1 * RecursionFactorial(0)))))  
+
+= 5 * (4 * (3 * (2 * (1 * 1))))  
+
+= 120  
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+This recursive approach has O(n) linear time complexity, since it makes n function calls.
+
+💡 But be careful!
+
+Recursive calls consume stack space, leading to stack overflow for very large n.
+
+In such cases, iteration is preferred for better efficiency.
+
+💡 Key Takeaways
+
+✔ Recursion simplifies complex problems by breaking them into smaller subproblems.
+
+✔ Factorial recursion is a great way to understand function calls & base cases.
+
+✔ For large n, an iterative approach can be more memory-efficient!
+
+
+
+
+
+Let’s keep learning! 🚀
+
+
+
+
+
+#100DaysOfDSA #Recursion #Factorial #JavaScript #Coding #Tech #DataStructures

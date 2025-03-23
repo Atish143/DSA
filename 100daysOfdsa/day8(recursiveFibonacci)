@@ -1,0 +1,101 @@
+Hello LinkedIn! 👋
+
+
+
+🚀 Day 8 of My #100DaysOfDSA Journey! 🚀
+
+
+
+Today, I explored Recursion in Fibonacci! 🔄 One of the most classic problems to understand recursion.
+
+
+
+
+
+📌 What is the Fibonacci Sequence?
+
+The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, starting from:
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+So, if we want the 6th Fibonacci number, the result should be 8.
+
+
+
+
+
+
+
+🛠️ Recursive Solution for Fibonacci in JavaScript
+
+function RecursionFibonacci(n){
+
+    if(n < 2){
+
+        return n;  // Base case: Fibonacci(0) = 0, Fibonacci(1) = 1
+
+    }
+
+    return RecursionFibonacci(n-1) + RecursionFibonacci(n-2);  
+
+}
+
+console.log(RecursionFibonacci(6));  // Output: 8
+
+
+
+
+
+🧐 How Does This Work? (Breaking it Down)
+
+Each function call splits into two smaller problems:
+
+RecursionFibonacci(6)
+
+= RecursionFibonacci(5) + RecursionFibonacci(4)  
+
+= (RecursionFibonacci(4) + RecursionFibonacci(3)) + (RecursionFibonacci(3) + RecursionFibonacci(2))
+
+...
+
+This keeps breaking down until we reach our base case (n < 2). At that point, the function starts returning values, and the results bubble back up to get the final answer.
+
+
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+The recursive Fibonacci solution has O(2ⁿ) exponential time complexity. Why?
+
+Each call branches into two more calls.
+
+As n increases, the number of calls doubles.
+
+This is not efficient for large n due to overlapping subproblems.
+
+🚀 Optimized Fibonacci? Use Memoization!
+
+A better way to solve Fibonacci is by storing already computed values (Memoization). I'll cover this in the next post!
+
+💡 Key Takeaways
+
+✔ Recursion breaks a big problem into smaller subproblems.
+
+✔ Fibonacci recursion is a great way to understand function calls & base cases.
+
+✔ But recursion can be inefficient—optimizations like memoization can help!
+
+
+
+
+
+Let’s keep learning! 🚀
+
+
+
+
+
+#100DaysOfDSA #Recursion #Fibonacci #JavaScript #Coding #Tech #DataStructures

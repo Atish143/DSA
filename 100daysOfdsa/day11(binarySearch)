@@ -1,0 +1,129 @@
+Hello LinkedIn! 👋
+
+🚀 Day 11 of My #100DaysOfDSA Journey! 🚀
+
+
+
+
+
+Today, I explored Binary Search – a much faster searching algorithm than Linear Search! 🔍
+
+
+
+
+
+📌 What is Binary Search?
+
+Binary Search is an efficient searching technique that works on sorted arrays. It repeatedly divides the search space into half until it finds the target.
+
+
+
+
+
+🔹 Example:
+
+Imagine searching for a word in a dictionary 📖. You don’t check every word one by one. Instead, you open the middle, compare, and move left or right accordingly.
+
+
+
+
+
+
+
+🛠️ Binary Search in JavaScript
+
+function BinarySearch(array, target) {
+
+    let leftIndex = 0;
+
+    let rightIndex = array.length - 1;
+
+    while (leftIndex <= rightIndex) {
+
+        let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+
+        console.log('middleIndex:', middleIndex);
+
+        if (target === array[middleIndex]) {
+
+            return middleIndex;  // Target found
+
+        }
+
+        if (target < array[middleIndex]) {
+
+            rightIndex = middleIndex - 1;  // Search in left half
+
+        } else {
+
+            leftIndex = middleIndex + 1;  // Search in right half
+
+        }
+
+    }
+
+    return -1;  // Target not found
+
+}
+
+console.log(BinarySearch([-2, 10, 18, 25, 30, 40], 25)); // Output: 3
+
+
+
+
+
+
+
+🧐 How Does This Work? (Step-by-Step Example)
+
+For array = [-2, 10, 18, 25, 30, 40] and target = 25:
+
+ 1️⃣ Find the middle → (0 + 5) / 2 = 2 → array[2] = 18 (not 25)
+
+ 2️⃣ Since 25 > 18, search right half (index 3 to 5)
+
+ 3️⃣ New middle → (3 + 5) / 2 = 4 → array[4] = 30 (not 25)
+
+ 4️⃣ Since 25 < 30, search left half (index 3)
+
+ 5️⃣ array[3] = 25 ✅ Found! Returns index 3
+
+
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+🔹 Worst Case: O(log n) – With each step, we eliminate half the elements.
+
+🔹 Best Case: O(1) – If the middle element is the target.
+
+💡 Binary Search is much faster than Linear Search for large datasets!
+
+
+
+
+
+
+
+💡 Key Takeaways
+
+✔ Works only on sorted arrays.
+
+✔ More efficient than Linear Search (O(n)).
+
+✔ Reduces search space by half each time (O(log n)).
+
+
+
+
+
+Binary Search is a must-know for every developer! 🚀
+
+
+
+
+
+#100DaysOfDSA #BinarySearch #JavaScript #Coding #Tech #DataStructures

@@ -2,7 +2,8 @@
 //else return -1 if target element not found 
 
 
-function BinarySearch(array , target){
+
+function binarySearch(array , target){
 
     let leftIndex = 0;
     let rightIndex = array.length - 1
@@ -23,4 +24,4 @@ function BinarySearch(array , target){
     return -1
 }
 
-console.log(BinarySearch([-2,10,18,25,30 , 40] , 25))
+console.log(inarySearch([-2,10,18,25,30 , 40] , 25))

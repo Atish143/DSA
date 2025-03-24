@@ -1,4 +1,4 @@
-function SumOfNutralNumbers(n){
+function sumOfNutralNumbers(n){
     let sum = 0;                          //1
     for(let i = 0; i<=n ; i++){
         sum += i                          //n
@@ -19,4 +19,4 @@ function SumOfNutralNumbers(n){
 
 
 
-console.log(SumOfNutralNumbers(2))
+console.log(sumOfNutralNumbers(2))

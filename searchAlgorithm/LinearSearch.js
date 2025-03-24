@@ -1,6 +1,6 @@
 // find the target elemnet from the array 
 
-function LinearSearch(arr , target){
+function linearSearch(arr , target){
 
     for(let i = 0 ; i < arr.length ; i++){
         if(arr[i] === target){
@@ -10,4 +10,4 @@ function LinearSearch(arr , target){
     return -1
 }
 
-console.log(LinearSearch([10,20,30,40],40))
+console.log(linearSearch([10,20,30,40],40))

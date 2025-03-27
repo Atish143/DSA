@@ -1,9 +1,5 @@
 Hello LinkedIn! 👋
-
-
-
 🚀 Day 5 of My #100DaysOfDSA Journey! 🚀
-
 
 
 Today, I explored a simple but interesting problem: Checking if a number is a Power of 2!
@@ -19,7 +15,7 @@ A number is a power of 2 if you can keep dividing it by 2 until you reach 1, wit
 
 
 📌 Examples:
-
+ 
  ✔ 8 → 8 → 4 → 2 → 1 ✅ (Power of 2)
 
  ✔ 16 → 16 → 8 → 4 → 2 → 1 ✅ (Power of 2)

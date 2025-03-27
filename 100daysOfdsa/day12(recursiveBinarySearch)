@@ -1,0 +1,141 @@
+Hello LinkedIn! 👋
+
+🚀 Day 12 of My #100DaysOfDSA Journey! 🚀
+
+
+
+
+
+Today, I took Binary Search to the next level by implementing it recursively! 🔥
+
+
+
+
+
+📌 What is Recursive Binary Search?
+
+Just like Binary Search, Recursive Binary Search works by dividing the search space into half. However, instead of using a loop, it calls itself (recursively) until the target element is found.
+
+
+
+
+
+🔹 Example:
+
+Imagine searching for a word in a dictionary 📖. Instead of manually flipping pages, you ask a friend to check the middle and delegate the search further. That’s recursion in action!
+
+
+
+
+
+
+
+
+
+🛠️ Recursive Binary Search in JavaScript
+
+
+
+function recursiveBinarySearch(array, target) {
+
+    return search(array, target, 0, array.length - 1);
+
+}
+
+
+
+function search(array, target, leftIndex, rightIndex) {
+
+    if (leftIndex > rightIndex) {
+
+        return -1;  // Target not found
+
+    }
+
+
+
+    let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+
+
+
+    if (target === array[middleIndex]) {
+
+        return middleIndex;  // Target found
+
+    }
+
+
+
+    if (target < array[middleIndex]) {
+
+        return search(array, target, leftIndex, middleIndex - 1);  // Search in left half
+
+    } else {
+
+        return search(array, target, middleIndex + 1, rightIndex);  // Search in right half
+
+    }
+
+}
+
+console.log(recursiveBinarySearch([-2, 20, 30, 40, 50, 60, 80], 50)); // Output: 4
+
+
+
+
+
+
+
+🧐 How Does This Work? (Step-by-Step Example)
+
+ For array = [-2, 20, 30, 40, 50, 60, 80] and target = 50:
+
+ 1️⃣ Find the middle → (0 + 6) / 2 = 3 → array[3] = 40 (not 50)
+
+ 2️⃣ Since 50 > 40, recursively search right half (index 4 to 6)
+
+ 3️⃣ New middle → (4 + 6) / 2 = 5 → array[5] = 60 (not 50)
+
+ 4️⃣ Since 50 < 60, recursively search left half (index 4)
+
+ 5️⃣ array[4] = 50 ✅ Found! Returns index 4
+
+
+
+
+
+⏳ Understanding Time Complexity
+
+🔹 Worst Case: O(log n) – The search space halves each time.
+
+🔹 Best Case: O(1) – If the middle element is the target.
+
+💡 Recursion makes the code more elegant but uses additional stack space.
+
+
+
+
+
+
+
+💡 Key Takeaways
+
+✔ Binary Search can be implemented iteratively or recursively.
+
+✔ Recursion makes code more readable but may use extra memory.
+
+✔ Same O(log n) complexity as Iterative Binary Search.
+
+Recursion is a fundamental concept in problem-solving! Let me know if you 
+
+
+
+
+
+prefer the iterative or recursive approach. 🚀
+
+
+
+
+
+#100DaysOfDSA #BinarySearch #Recursion #JavaScript #Coding #Tech #DataStructures

@@ -1,0 +1,57 @@
+// Hello LinkedIn! 👋
+// 🚀 Day 13 of My #100DaysOfDSA Journey! 🚀
+
+
+// Today, I explored Bubble Sort, one of the simplest sorting algorithms! 🔥
+
+// 📌 What is Bubble Sort?
+// Bubble Sort repeatedly steps through the array, compares adjacent elements, and swaps them if they are in the wrong order. This process continues until the array is fully sorted.
+
+// 🔹 Example:
+// Think of bubbles rising in water – the larger bubbles (numbers) gradually move to the top (end of the array), just like in this sorting algorithm! 🌊
+
+// 🛠️ Bubble Sort in JavaScript
+// js
+// Copy
+// Edit
+// function bubbleSort(array) {
+//     let swapped;
+//     do {
+//         swapped = false;
+//         for (let i = 0; i < array.length - 1; i++) {
+//             if (array[i] > array[i + 1]) {
+//                 let temp = array[i];
+//                 array[i] = array[i + 1];
+//                 array[i + 1] = temp;
+//                 swapped = true;
+//             }
+//         }
+//     } while (swapped);
+// }
+
+// const unSortedArray = [-2, 4, -45, 8, 238, 4956, -234, 3];
+// bubbleSort(unSortedArray);
+// console.log(unSortedArray);  
+// // Output: [-234, -45, -2, 3, 4, 8, 238, 4956]
+// 🧐 How Does This Work? (Step-by-Step Example)
+// For array = [4, 2, 7, 1]
+
+// 1️⃣ Compare 4 & 2 → Swap → [2, 4, 7, 1]
+// 2️⃣ Compare 4 & 7 → No swap
+// 3️⃣ Compare 7 & 1 → Swap → [2, 4, 1, 7]
+// 4️⃣ Repeat until fully sorted! ✅
+
+// ⏳ Understanding Time Complexity
+// 🔹 Worst Case: O(n²) – When the array is reversed.
+// 🔹 Best Case: O(n) – When the array is already sorted.
+
+// 💡 Bubble Sort is easy to understand but not the most efficient sorting algorithm.
+
+// 💡 Key Takeaways
+// ✔ Simple sorting algorithm but inefficient for large datasets.
+// ✔ Best for learning sorting logic & understanding swaps.
+// ✔ Time Complexity: O(n²), Space Complexity: O(1) (in-place sorting).
+
+// Let me know if you have used Bubble Sort before or prefer other sorting techniques! 🚀
+
+// #100DaysOfDSA #BubbleSort #Sorting #JavaScript #Coding #Tech #DataStructures

@@ -1,0 +1,52 @@
+// Hello LinkedIn! 👋
+// 🚀 Day 14 of My #100DaysOfDSA Journey! 🚀
+
+
+// Today, I explored Insertion Sort, a simple yet effective sorting algorithm! 🔥
+
+// 📌 What is Insertion Sort?
+// Insertion Sort builds a sorted array one element at a time by picking an element and placing it in its correct position, just like sorting playing cards in your hand! 🃏
+
+// 🛠️ Insertion Sort in JavaScript
+// js
+// Copy
+// Edit
+// function insertionSort(array) {
+//     for (let i = 1; i < array.length; i++) {
+//         let numberToInsert = array[i]; // The number to be placed in the right position
+//         let j = i - 1;
+        
+//         while (j >= 0 && array[j] > numberToInsert) {
+//             array[j + 1] = array[j]; // Shift elements
+//             j = j - 1;
+//         }
+        
+//         array[j + 1] = numberToInsert; // Insert in the correct position
+//     }
+// }
+
+// const arr = [999, 45, -54, 549, -7, 75];
+// insertionSort(arr);
+// console.log(arr);  
+// // Output: [-54, -7, 45, 75, 549, 999]
+// 🧐 How Does This Work? (Step-by-Step Example)
+// For array = [5, 3, 8, 1]
+
+// 1️⃣ Pick 3 → Compare with 5, Insert before 5 → [3, 5, 8, 1]
+// 2️⃣ Pick 8 → No change needed
+// 3️⃣ Pick 1 → Compare & Shift → [1, 3, 5, 8] ✅
+
+// ⏳ Understanding Time Complexity
+// 🔹 Worst Case: O(n²) – When the array is reversed.
+// 🔹 Best Case: O(n) – When the array is already sorted.
+
+// 💡 Insertion Sort is efficient for small datasets and nearly sorted arrays!
+
+// 💡 Key Takeaways
+// ✔ Great for small or nearly sorted datasets.
+// ✔ Stable sorting algorithm (maintains order of equal elements).
+// ✔ Time Complexity: O(n²) in worst case, O(n) in best case.
+
+// Have you used Insertion Sort before? Or do you prefer another sorting technique? Let’s discuss in the comments! 🚀
+
+// #100DaysOfDSA #InsertionSort #Sorting #JavaScript #Coding #Tech #DataStructures

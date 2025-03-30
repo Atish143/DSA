@@ -1,0 +1,60 @@
+🚀 Day 15 of My #100DaysOfDSA Journey! 🚀
+Hello LinkedIn! 👋
+
+Today, I explored Quick Sort, one of the most efficient sorting algorithms! ⚡
+
+📌 What is Quick Sort?
+Quick Sort is a divide and conquer algorithm that selects a pivot element and partitions the array into two parts:
+🔹 Left Subarray → Elements smaller than the pivot
+🔹 Right Subarray → Elements greater than the pivot
+It then recursively sorts both subarrays and combines them!
+
+🛠️ Quick Sort in JavaScript
+
+function quickSort(array) {
+    if (array.length < 2) {
+        return array; // Base case
+    }
+
+    let pivot = array[array.length - 1]; // Choosing the last element as pivot
+    let left = [];
+    let right = [];
+
+    for (let i = 0; i < array.length - 1; i++) {
+        if (array[i] < pivot) {
+            left.push(array[i]); // Elements smaller than pivot
+        } else {
+            right.push(array[i]); // Elements greater than pivot
+        }
+    }
+
+    return [...quickSort(left), pivot, ...quickSort(right)];
+}
+
+const arr = [999, 45, -54, 549, -7, 75];
+console.log(quickSort(arr));  
+// Output: [-54, -7, 45, 75, 549, 999]
+🧐 How Does Quick Sort Work? (Step-by-Step Example)
+For array = [5, 3, 8, 1] with pivot = 1
+
+1️⃣ Partition → Left [ ], Pivot 1, Right [5, 3, 8]
+2️⃣ Recursive sort → Left remains empty, Right [5, 3, 8] → Pivot = 8
+3️⃣ New Left [5, 3], Pivot 8, Right [ ]
+4️⃣ Recursive sort → [3, 5] sorted
+✅ Final Output: [1, 3, 5, 8]
+
+⏳ Understanding Time Complexity
+🔹 Best & Average Case: O(n log n) – Efficient for large datasets.
+🔹 Worst Case: O(n²) – If the smallest or largest element is always chosen as the pivot (can be optimized).
+
+💡 Quick Sort is widely used due to its efficiency and in-place sorting capability!
+
+💡 Key Takeaways
+✔ Faster than Bubble & Insertion Sort for large datasets
+✔ Uses divide and conquer for better efficiency
+✔ Time Complexity: O(n log n) in the average case
+✔ Not a stable sort (doesn’t maintain relative order of equal elements)
+
+Have you used Quick Sort before? What’s your favorite sorting algorithm? Drop a comment below! 🚀
+
+#100DaysOfDSA #QuickSort #Sorting #JavaScript #Coding #Tech #DataStructures

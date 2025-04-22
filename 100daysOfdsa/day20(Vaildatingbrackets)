@@ -1,0 +1,62 @@
+🗓️ Day 20 of #100DaysOfDSA
+Hello LinkedIn! 👋
+
+Today’s problem is all about balancing!
+Let’s check if a string of parentheses, brackets, and curly braces is valid. ✅❌
+
+🔍 Problem Statement:
+Given a string containing just the characters (), {}, and [], determine if the input string is valid.
+A string is valid if:
+1️⃣ Open brackets are closed by the same type of brackets
+2️⃣ Brackets are closed in the correct order
+
+💻 JavaScript Solution:
+js
+Copy
+Edit
+function isValid(s) {
+  const stack = [];
+  const bracketMap = {
+    ')': '(',
+    '}': '{',
+    ']': '['
+  };
+
+  for (let char of s) {
+    if (char === '(' || char === '{' || char === '[') {
+      stack.push(char);
+    } else {
+      if (stack.pop() !== bracketMap[char]) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}
+
+console.log(isValid("()"));        // true
+console.log(isValid("()[]{}"));    // true
+console.log(isValid("(]"));        // false
+console.log(isValid("([)]"));      // false
+console.log(isValid("{[]}"));      // true
+🧠 Key Concepts:
+Stack data structure 📚
+
+Hash map for bracket pairing 🔁
+
+Push when opening, pop and compare on closing
+
+✨ This is a classic interview favorite, often used to test your understanding of stacks and character manipulation. Try modifying it for HTML/XML tag validation too!
+
+Let me know your thoughts or if you’ve optimized it differently! ⬇️
+
+#100DaysOfCode #JavaScript #DataStructures #Stack #CodingChallenge #FrontendDeveloper #WebDevelopment #DSA #TechCommunity #InterviewPrep #CodeNewbie
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+🗓️ Day 26 of #100DaysOfDSA
+Hey LinkedIn family! 👋
+
+Today I leveled up my Linked List implementation by adding a new superpower:
+⚡ Insert at any position!
+
+🧠 What I learned today?
+Along with the existing methods like prepend (insert at beginning) and append (insert at end), I added:
+
+🔹 insert(value, index) – This allows insertion of a node at any valid position inside the linked list!
+Whether it's the head, middle, or tail — we’ve got it covered.
+
+🛠 Code Snapshot
+js
+Copy
+Edit
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  getSize() {
+    return this.size;
+  }
+
+  prepend(value) {
+    const node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+    this.size++;
+  }
+
+  append(value) {
+    const node = new Node(value);
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      let prev = this.head;
+      while (prev.next) {
+        prev = prev.next;
+      }
+      prev.next = node;
+    }
+    this.size++;
+  }
+
+  insert(value, index) {
+    if (index < 0 || index > this.size) return;
+
+    if (index === 0) {
+      this.prepend(value);
+    } else {
+      const node = new Node(value);
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      node.next = prev.next;
+      prev.next = node;
+      this.size++;
+    }
+  }
+
+  print() {
+    let current = this.head;
+    while (current) {
+      console.log(current.value);
+      current = current.next;
+    }
+  }
+}
+✅ Sample Usage
+js
+Copy
+Edit
+const list = new LinkedList();
+list.prepend(10);
+list.prepend(20);
+list.insert(90, 0);  // Insert at beginning
+list.append(40);
+list.append(50);
+list.print();  // Output: 90 -> 20 -> 10 -> 40 -> 50
+⏱ Time Complexity
+
+Operation	Time Complexity
+prepend()	O(1)
+append()	O(n)
+insert()	O(n) (worst case)
+print()	O(n)
+🔍 Why this matters?
+Understanding how to manipulate a Linked List at any point helps in:
+
+Building efficient memory structures
+
+Solving real-world dynamic list problems
+
+Strengthening your foundation for upcoming concepts like doubly linked lists, stacks, and queues
+
+💬 What's your favorite Linked List method so far – prepend, append, or insert?
+
+See you tomorrow with remove operations! 🚀
+
+#100DaysOfCode #JavaScript #DataStructures #LinkedList #DSA #CodingJourney #CodeNewbie #Frontend #TechCommunity #LearningInPublicda

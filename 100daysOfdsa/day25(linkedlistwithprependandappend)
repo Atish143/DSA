@@ -1,0 +1,98 @@
+🗓️ Day 25 of #100DaysOfDSA
+Hey LinkedIn fam! 👋
+
+Today’s deep dive is into one of the fundamental data structures:
+🔗 Singly Linked List — with both prepend (add at start) and append (add at end) functionality!
+
+🔨 What did I build?
+A custom Linked List class in JavaScript with:
+
+✅ prepend() - Add a node at the beginning
+
+✅ append() - Add a node at the end
+
+✅ Utility methods like isEmpty(), getSize(), and print()
+
+💻 Code Snapshot
+js
+Copy
+Edit
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  getSize() {
+    return this.size;
+  }
+
+  prepend(value) {
+    const node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+    this.size++;
+  }
+
+  append(value) {
+    const node = new Node(value);
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      let prev = this.head;
+      while (prev.next) {
+        prev = prev.next;
+      }
+      prev.next = node;
+    }
+    this.size++;
+  }
+
+  print() {
+    let current = this.head;
+    while (current) {
+      console.log(current.value);
+      current = current.next;
+    }
+  }
+}
+
+// Usage
+const list = new LinkedList();
+list.prepend(10);
+list.prepend(20);
+list.append(40);
+list.append(50);
+list.print();
+⏱ Time Complexity
+
+Operation	Time Complexity
+prepend()	O(1)
+append()	O(n)
+print()	O(n)
+✅ prepend is lightning fast.
+⚠️ append traverses the list — can be improved using a tail pointer!
+
+💭 Why it matters?
+Helps in building stacks, queues, and even graph adjacency lists
+
+Useful for problems involving dynamic memory allocation
+
+Boosts your understanding of pointers and node references
+
+🔄 Coming up next: Inserting at a specific index and removing nodes!
+
+💬 Curious to hear — do you prefer Linked Lists or Arrays for dynamic data?
+
+#100DaysOfCode #JavaScript #DataStructures #LinkedList #WebDevelopment #CodeNewbie #DSA #Frontend #TechCommunity #LearningInPublic

@@ -1,0 +1,55 @@
+🚀 Day 17 of #100DaysOfDSA 🚀
+Hello LinkedIn! 👋
+
+Today’s topic is a classic but powerful concept in set theory and combinatorics — Cartesian Product!
+
+📌 What is a Cartesian Product?
+Given two arrays (or sets), the Cartesian Product returns all possible ordered pairs — where the first element is from the first array, and the second is from the second array.
+
+It’s useful in:
+
+Combinatorics
+
+Nested loops
+
+Joining datasets (e.g., SQL JOIN logic)
+
+🧠 JavaScript Implementation:
+js
+Copy
+Edit
+function cartesianProduct(arr1, arr2) {
+    let result = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            result.push([arr1[i], arr2[j]]);
+        }
+    }
+    return result;
+}
+
+const arr1 = [2, 1, 4];
+const arr2 = [7, 8];
+console.log(cartesianProduct(arr1, arr2));
+
+// Output:
+// [
+//   [2, 7], [2, 8],
+//   [1, 7], [1, 8],
+//   [4, 7], [4, 8]
+// ]
+⚡ Time Complexity:
+O(n * m) — where n is the length of arr1 and m is the length of arr2.
+
+📚 Learning takeaways:
+
+Helps understand how nested loops work
+
+Common in problem-solving scenarios involving pair generation
+
+A good foundation before diving into more complex combinations and permutations
+
+Let’s keep learning and growing together 💪
+Have you used Cartesian Product in your projects?
+
+#JavaScript #DSA #Coding #WebDevelopment #TechCommunity #LearnInPublic #DailyCode #ProblemSolving #100DaysOfCode #CodeNewbie

@@ -1,0 +1,124 @@
+🗓 Day 31 of #100DaysOfDSA
+Today I implemented a Singly Linked List with Tail Pointer in JavaScript! 🚀
+
+Learning about how keeping track of the tail node can optimize operations like append() and make removeFromEnd() cleaner was a game-changer for me. Here's the full code with the methods I learned today 👇
+
+📦 Full Code with tail node:
+js
+Copy
+Edit
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    constructor() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
+
+    isEmpty() {
+        return this.size === 0;
+    }
+
+    getSize() {
+        return this.size;
+    }
+
+    print() {
+        let current = this.head;
+        let output = '';
+        while (current) {
+            output += current.value + ' -> ';
+            current = current.next;
+        }
+        console.log(output + 'null');
+    }
+
+    prepend(value) {
+        const node = new Node(value);
+        if (this.isEmpty()) {
+            this.head = node;
+            this.tail = node;
+        } else {
+            node.next = this.head;
+            this.head = node;
+        }
+        this.size++;
+    }
+
+    append(value) {
+        const node = new Node(value);
+        if (this.isEmpty()) {
+            this.head = node;
+            this.tail = node;
+        } else {
+            this.tail.next = node;
+            this.tail = node;
+        }
+        this.size++;
+    }
+
+    removeFromFront() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        const value = this.head.value;
+        this.head = this.head.next;
+        this.size--;
+        if (this.isEmpty()) {
+            this.tail = null;
+        }
+        return value;
+    }
+
+    removeFromEnd() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        const value = this.tail.value;
+        if (this.size === 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            let prev = this.head;
+            while (prev.next !== this.tail) {
+                prev = prev.next;
+            }
+            prev.next = null;
+            this.tail = prev;
+        }
+        this.size--;
+        return value;
+    }
+}
+💡 What I Learned:
+How adding a tail pointer optimizes append() to O(1)
+
+Clean removal of the last node using removeFromEnd()
+
+Managing both head and tail ensures correctness even for edge cases
+
+🧪 Sample Output:
+js
+Copy
+Edit
+const list = new LinkedList();
+list.append(1);
+list.append(2);
+list.append(3);
+list.append(4);
+list.prepend(0);
+list.print(); // 0 -> 1 -> 2 -> 3 -> 4 -> null
+
+list.removeFromEnd();
+list.removeFromFront();
+list.print(); // 1 -> 2 -> 3 -> null
+Excited to keep building more DSA fundamentals!
+Let me know if you've used tail in your Linked List too! 🔄
+
+#100DaysOfCode #DSA #JavaScript #LinkedList #Frontend #WebDevelopment #CodeNewbie #DevJourney #LearnInPublic #DataStructures

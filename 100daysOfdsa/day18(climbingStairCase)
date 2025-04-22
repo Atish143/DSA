@@ -1,0 +1,50 @@
+🚀 Day 18 of #100DaysOfDSA 🚀
+Hello LinkedIn! 👋
+
+Today’s challenge is a popular one in dynamic programming:
+🧗 Climbing Staircase Problem
+
+🧩 Problem Statement:
+You're standing at the bottom of a staircase with n steps.
+You can either take 1 step or 2 steps at a time.
+How many distinct ways can you climb to the top?
+
+🧠 JavaScript Solution (Dynamic Programming):
+js
+Copy
+Edit
+function climbingStaircase(n) {
+    const noOfWays = [1, 2];
+    for (let i = 2; i <= n; i++) {
+        noOfWays[i] = noOfWays[i - 1] + noOfWays[i - 2];
+    }
+    return noOfWays[n - 1];
+}
+
+console.log(climbingStaircase(4)); // Output: 5
+🔎 Example:
+If n = 4, the number of ways to reach the top is 5:
+
+1+1+1+1
+
+1+2+1
+
+2+1+1
+
+1+1+2
+
+2+2
+
+📊 Time Complexity:
+O(n) — We use a bottom-up approach to avoid redundant calculations (unlike recursion).
+
+✅ Why this problem matters?
+
+Foundation for understanding Fibonacci-like sequences
+
+Teaches optimal substructure and overlapping subproblems, the pillars of dynamic programming
+
+Would you solve this recursively or with memoization?
+Let me know your take!👇
+
+#100DaysOfCode #DSA #JavaScript #DynamicProgramming #TechCommunity #CodingChallenge #CodeNewbie #WebDevelopment #LearnInPublic #ClimbingStairs #DevJourney #ProblemSolving

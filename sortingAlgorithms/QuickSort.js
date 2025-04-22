@@ -17,3 +17,5 @@ function quickSort(array){
 }
 const q = [999,45,-54,549,-7,75,]
 console.log(quickSort(q))
+
+

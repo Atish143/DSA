@@ -1,0 +1,52 @@
+🗓️ Day 19 of #100DaysOfDSA
+Hello LinkedIn! 👋
+
+Today, let’s tackle one of the most classic and elegant problems in recursion:
+🏰 Tower of Hanoi
+
+🔍 Problem Statement:
+You are given n disks stacked in increasing size on one rod (source).
+Your goal is to move all disks to another rod (destination), using a helper rod — but:
+
+You can only move one disk at a time.
+
+A larger disk can never be placed on top of a smaller one.
+
+💻 JavaScript Recursive Solution:
+js
+Copy
+Edit
+function towerOfHanoi(n, fromRod, toRod, usingRod) {
+    if (n === 1) {
+        console.log(`Move disk 1 from ${fromRod} to ${toRod}`);
+        return;
+    }
+    towerOfHanoi(n - 1, fromRod, usingRod, toRod);
+    console.log(`Move disk ${n} from ${fromRod} to ${toRod}`);
+    towerOfHanoi(n - 1, usingRod, toRod, fromRod);
+}
+
+towerOfHanoi(3, 'A', 'C', 'B');
+📦 Output:
+css
+Copy
+Edit
+Move disk 1 from A to C  
+Move disk 2 from A to B  
+Move disk 1 from C to B  
+Move disk 3 from A to C  
+Move disk 1 from B to A  
+Move disk 2 from B to C  
+Move disk 1 from A to C  
+🧠 Key Concepts:
+Classic example of divide and conquer
+
+Excellent to understand recursive call flow
+
+Number of moves = 2^n - 1 ➡️ For n = 3, total moves = 7
+
+If recursion is a mystery to you, try this one out — it’s the perfect way to visualize call stacks in action! 🧩
+
+Have you ever tried solving this iteratively? Let’s talk! 👇
+
+#100DaysOfCode #DSA #JavaScript #Recursion #TowerOfHanoi #CodingChallenge #TechCommunity #LearnInPublic #DevJourney #CodeNewbie #Frontend #Backend #WebDevelopment #Algorithms

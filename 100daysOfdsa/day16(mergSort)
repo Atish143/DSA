@@ -1,0 +1,67 @@
+// 🚀 Day 16 of My #100DaysOfDSA Journey! 🚀
+// Hello LinkedIn! 👋
+
+// Today, I explored another powerful and widely used sorting algorithm — Merge Sort!
+
+// 📌 What is Merge Sort?
+// Merge Sort is a Divide and Conquer algorithm that:
+
+// Divides the array into halves
+
+// Recursively sorts each half
+
+// Merges the sorted halves back together
+
+// It’s known for its predictable performance and stable sorting.
+
+// 🧠 Merge Sort in JavaScript:
+// js
+// Copy
+// Edit
+// function mergeSort(arr) {
+//     if (arr.length < 2) {
+//         return arr; // Base case
+//     }
+
+//     const mid = Math.floor(arr.length / 2);
+//     const leftArr = arr.slice(0, mid);
+//     const rightArr = arr.slice(mid);
+
+//     return merge(mergeSort(leftArr), mergeSort(rightArr));
+// }
+
+// function merge(leftArr, rightArr) {
+//     const sortedArr = [];
+
+//     while (leftArr.length && rightArr.length) {
+//         if (leftArr[0] <= rightArr[0]) {
+//             sortedArr.push(leftArr.shift());
+//         } else {
+//             sortedArr.push(rightArr.shift());
+//         }
+//     }
+
+//     return [...sortedArr, ...leftArr, ...rightArr];
+// }
+
+// const arr = [8, 20, -5, 19];
+// console.log(mergeSort(arr)); 
+// // Output: [-5, 8, 19, 20]
+// ⚡ Time & Space Complexity
+// 🔁 Time Complexity: O(n log n) in all cases (best, average, worst)
+
+// 📦 Space Complexity: O(n) — extra space needed for merging arrays
+
+// ✅ Why Use Merge Sort?
+// ✔ Always performs in O(n log n) time
+// ✔ Great for sorting linked lists or large datasets
+// ✔ Stable sort (maintains the order of equal elements)
+// ✔ Simple recursive logic
+
+// 🧩 Fun Fact: Merge Sort was invented by John von Neumann in 1945!
+
+// Have you implemented Merge Sort before? Which sorting algorithm do you use the most?
+
+// Let’s connect and share ideas! 💬
+
+// #100DaysOfCode #DSA #MergeSort #JavaScript #CodingJourney #TechCommunity #WebDevelopment

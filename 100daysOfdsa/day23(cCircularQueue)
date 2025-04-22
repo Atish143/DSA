@@ -1,0 +1,92 @@
+// 🗓️ Day 23 of #100DaysOfDSA
+// Hey LinkedIn! 👋
+
+// Today’s focus: 🚀 Circular Queue — an optimized version of a regular queue that uses space efficiently via circular indexing.
+
+// 🔄 What is a Circular Queue?
+// In a Circular Queue, the last position is connected back to the first to form a circle.
+// This helps in utilizing unused space when elements are dequeued. 📦
+
+// It avoids the "false overflow" problem that occurs in linear queues.
+
+// 💡 JavaScript Implementation
+// js
+// Copy
+// Edit
+// class CircularQueue {
+//   constructor(k) {
+//     this.queue = new Array(k);
+//     this.size = k;
+//     this.front = -1;
+//     this.rear = -1;
+//   }
+
+//   enqueue(value) {
+//     if ((this.rear + 1) % this.size === this.front) {
+//       console.log("Queue is full.");
+//       return false;
+//     }
+//     if (this.front === -1) this.front = 0;
+//     this.rear = (this.rear + 1) % this.size;
+//     this.queue[this.rear] = value;
+//     return true;
+//   }
+
+//   dequeue() {
+//     if (this.front === -1) return false;
+//     if (this.front === this.rear) {
+//       this.front = this.rear = -1;
+//     } else {
+//       this.front = (this.front + 1) % this.size;
+//     }
+//     return true;
+//   }
+
+//   Front() {
+//     return this.front === -1 ? -1 : this.queue[this.front];
+//   }
+
+//   Rear() {
+//     return this.rear === -1 ? -1 : this.queue[this.rear];
+//   }
+
+//   isEmpty() {
+//     return this.front === -1;
+//   }
+
+//   isFull() {
+//     return ((this.rear + 1) % this.size) === this.front;
+//   }
+// }
+// ⏱ Time Complexity
+// Operation	Time Complexity
+// Enqueue	O(1)
+// Dequeue	O(1)
+// Peek Front/Rear	O(1)
+// isEmpty/isFull	O(1)
+// Thanks to the circular nature, operations are done in constant time, making it super efficient 🚀
+
+// ✅ Sample Usage
+// js
+// Copy
+// Edit
+// const q = new CircularQueue(5);
+// q.enqueue(10);
+// q.enqueue(20);
+// q.enqueue(30);
+// q.dequeue();
+// q.enqueue(40);
+// console.log(q.Front()); // 20
+// console.log(q.Rear());  // 40
+// 📌 Circular Queues are useful in:
+
+// CPU Scheduling
+
+// Traffic Buffers
+
+// Memory Management
+
+// Stay tuned for more DSA magic! 💡
+// Let me know in the comments: Where have YOU used Circular Queues?
+
+// #100DaysOfCode #JavaScript #DataStructures #CircularQueue #DSA #WebDev #Frontend #TechLearning #CodingJourney #ProblemSolving

@@ -1,0 +1,60 @@
+// 🗓️ Day 21 of #100DaysOfDSA
+// Hello LinkedIn! 👋
+
+// Today, let's build something super useful — a Queue in JavaScript!
+// A queue follows FIFO (First-In-First-Out) — just like people waiting in line at a coffee shop ☕.
+
+// 📦 What is a Queue?
+// A Queue is a linear data structure where elements are added at one end and removed from the other.
+// Perfect for scheduling, order processing, and async tasks!
+
+// 💻 JavaScript Implementation:
+// js
+// Copy
+// Edit
+// function createQueue() {
+//   let items = [];
+
+//   return {
+//     // Enqueue - Add to end
+//     enqueue: (element) => {
+//       items.push(element);
+//     },
+
+//     // Peek at front item
+//     front: () => {
+//       return items.length > 0 ? items[0] : "Queue is empty";
+//     },
+
+//     // Check if empty
+//     isEmpty: () => items.length === 0,
+
+//     // Size of queue
+//     size: () => items.length,
+
+//     // Print queue
+//     print: () => console.log(items.join(" <- "))
+//   };
+// }
+
+// const queue = createQueue();
+
+// queue.enqueue("Task 1");
+// queue.enqueue("Task 2");
+// queue.enqueue("Task 3");
+
+// queue.print(); // Task 1 <- Task 2 <- Task 3
+// console.log(queue.front());     // Task 1
+// console.log(queue.size());      // 3
+// console.log(queue.isEmpty());   // false
+// 🧠 Concepts Covered:
+// Closure for private state 🔒
+
+// FIFO ordering 📥📤
+
+// Queue operations: enqueue, front, size, print
+
+// 🧪 Try adding a dequeue method too!
+// This basic structure is a great foundation for job queues, printer spooling, and more.
+
+// #100DaysOfCode #JavaScript #DataStructures #Queue #WebDevelopment #DSA #TechCommunity #Frontend #DevJourney #Closures #CodingIsFun

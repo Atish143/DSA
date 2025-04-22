@@ -1,0 +1,82 @@
+🗓️ Day 24 of #100DaysOfDSA
+Hi LinkedIn fam! 👋
+
+Today’s data structure spotlight is on:
+🔗 Singly Linked List — Dynamic, memory-efficient, and versatile!
+
+🧠 What is a Linked List?
+Unlike arrays, a Linked List doesn't use contiguous memory.
+Each element (called a node) holds a value and a reference to the next node.
+Perfect for insertions and deletions when dynamic memory usage is a priority! 🔁
+
+💡 JavaScript Implementation
+js
+Copy
+Edit
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  getSize() {
+    return this.size;
+  }
+
+  prepend(value) {
+    const node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+    this.size++;
+  }
+
+  print() {
+    let current = this.head;
+    while (current) {
+      console.log(current.value);
+      current = current.next;
+    }
+  }
+}
+
+// Usage
+const list = new LinkedList();
+console.log('List is empty:', list.isEmpty());
+console.log('List size:', list.getSize());
+
+list.prepend(10);
+list.prepend(20);
+
+console.log('After adding elements:');
+list.print();
+⏱ Time Complexity
+Operation	Time Complexity
+prepend()	O(1)
+isEmpty()	O(1)
+getSize()	O(1)
+print()	O(n)
+Since prepend directly attaches the new node to the front, it's super fast — constant time!
+Traversals like print() naturally scale with the number of elements.
+
+📚 Why use Linked Lists?
+✅ Great for insertion/removal at the beginning
+✅ Avoids shifting elements like arrays
+✅ Ideal when size is not fixed
+
+🔄 Next up: Adding methods like append, insert at index, and remove to make our Linked List more powerful!
+
+Let me know👇
+Have you ever used Linked Lists in a real-world project or interview?
+
+#100DaysOfCode #JavaScript #LinkedList #DataStructures #Frontend #DSA #WebDevelopment #TechLearning #CodeNewbie #CodingCommunity

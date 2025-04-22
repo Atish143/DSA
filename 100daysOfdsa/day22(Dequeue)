@@ -1,0 +1,85 @@
+🗓️ Day 22 of #100DaysOfDSA
+Hello LinkedIn! 👋
+
+Today, let's talk about a super flexible data structure — the Deque (Double-Ended Queue)!
+Think of it as a combo of stack + queue, allowing insertion and deletion from both ends 🔄
+
+🔄 What is a Deque?
+A Deque (pronounced "deck") is a data structure where you can:
+
+Add/Remove items from the front
+
+Add/Remove items from the back
+
+It's like a line of people that can grow/shrink from either end 🧍‍♂️↔️🧍‍♀️
+
+💻 JavaScript Implementation:
+js
+Copy
+Edit
+class Deque {
+  constructor() {
+    this.items = [];
+  }
+
+  addFront(item) {
+    this.items.unshift(item);
+  }
+
+  addBack(item) {
+    this.items.push(item);
+  }
+
+  removeFront() {
+    return this.items.shift();
+  }
+
+  removeBack() {
+    return this.items.pop();
+  }
+
+  peekFront() {
+    return this.items[0];
+  }
+
+  peekBack() {
+    return this.items[this.items.length - 1];
+  }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  size() {
+    return this.items.length;
+  }
+}
+🧠 Use Cases:
+Browser History: Navigate forward/backward 🔁
+
+Palindrome Checking 🔤
+
+Task Scheduling ⏱️
+
+⚡ Try This:
+js
+Copy
+Edit
+const dq = new Deque();
+dq.addBack("A");
+dq.addBack("B");
+dq.addFront("C");
+dq.removeBack(); // Removes B
+console.log(dq.peekFront()); // C
+console.log(dq.peekBack());  // A
+Flexibility is power 💪 — and Deque gives us just that!
+
+#100DaysOfCode #JavaScript #DSA #Deque #WebDev #Frontend #TechLearning #ProblemSolving #CodingDaily #DevCommunity #CodeNewbie
+
+
+
+
+
+
+
+

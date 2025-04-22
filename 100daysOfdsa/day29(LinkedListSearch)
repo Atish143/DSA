@@ -1,0 +1,53 @@
+// 🗓️ Day 29 of #100DaysOfDSA
+// Hey LinkedIn fam! 👋
+
+// Today I explored a simple but very useful method in Linked Lists – the search(value) method 🧠🔍
+
+// 🔍 What does it do?
+// The search() function helps us find the index of a value in the Linked List.
+// If the value is found, it returns the index. If not, it returns -1.
+
+// 💡 Why is this useful?
+// In scenarios where data is stored in a linear structure like a Linked List and you need to find something quickly, this function is essential!
+
+// 💻 Here’s the code:
+// js
+// Copy
+// Edit
+// search(value){
+//     if(this.isEmpty()){
+//         return -1;
+//     }
+//     let i = 0;
+//     let curr = this.head;
+//     while(curr){
+//         if(curr.value === value){
+//             return i;
+//         } 
+//         curr = curr.next;
+//         i++;
+//     }
+//     return -1;
+// }
+// ✅ Example in action:
+// js
+// Copy
+// Edit
+// const list = new LinkedList();
+
+// list.insert(10, 0);
+// list.insert(20, 0);
+// list.insert(30, 0);
+// list.insert(40, 0);
+// list.insert(50, 0);
+
+// console.log('Searched element index:', list.search(20)); // Output: 3
+// list.print(); // Output: 50 → 40 → 30 → 20 → 10
+// 🧠 Time Complexity:
+// Worst Case: O(n)
+// (Because we may need to traverse the whole list to find the value)
+
+// Small step, but a big tool in building powerful data structures! 🚀
+// More to come tomorrow! 🔁
+
+// // #100DaysOfCode #DataStructures #JavaScript #LinkedList #DSA #search #CodingJourney #CodeNewbie #LearningInPublic #WebDevelopment #DevCommunity

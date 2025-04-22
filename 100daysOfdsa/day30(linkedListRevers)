@@ -1,0 +1,55 @@
+🗓 Day 30 of #100DaysOfDSA
+Hey LinkedIn fam! 👋
+
+Today I implemented a classic and powerful method in Linked Lists – the reverse() function 🔁💡
+
+🔄 What does reverse() do?
+It reverses the direction of a Linked List so that the head becomes the tail and vice versa — all done in-place, without using extra memory.
+
+💻 Here’s the code:
+js
+Copy
+Edit
+reverse(){
+    let prev = null;
+    let curr = this.head;
+    while(curr){
+        let next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+    }
+    this.head = prev;
+}
+🚀 How it works:
+Traverse the list while flipping the direction of each node's .next pointer.
+
+Track the prev node so each node can point backward.
+
+Finally, update the head to point to the last node (now the first).
+
+✅ Example in action:
+js
+Copy
+Edit
+const list = new LinkedList();
+
+list.insert(10, 0);
+list.insert(20, 0);
+list.insert(30, 0);
+list.insert(40, 0);
+list.insert(50, 0);
+
+list.print(); // Output: 50 → 40 → 30 → 20 → 10
+list.reverse();
+list.print(); // Output: 10 → 20 → 30 → 40 → 50
+⏱ Time Complexity:
+O(n) — every node is visited once
+
+O(1) space — in-place reversal
+
+One of the most common interview questions and a must-know for every dev working with data structures!
+
+More insights coming tomorrow! 🚀
+
+#100DaysOfCode #JavaScript #LinkedList #DSA #CodingJourney #ReverseLinkedList #WebDevelopment #CodeNewbie #TechLearning #DevLife #LearnInPublic

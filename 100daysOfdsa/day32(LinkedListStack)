@@ -1,0 +1,77 @@
+🗓 Day 32 of #100DaysOfDSA
+Today I learned about the Stack Data Structure using a Linked List in JavaScript! 🧱📦
+
+Stacks follow the LIFO (Last In, First Out) principle, and implementing one using a linked list (with a head pointer) makes push() and pop() operations super efficient — both in O(1) time complexity! 🚀
+
+🧠 What I Learned:
+✅ Stack operations: push(), pop(), peek()
+✅ Efficiently implemented using LinkedList
+✅ Under the hood, push uses prepend and pop uses removeFromFront
+✅ Super handy when we need reversal or backtracking logic!
+
+📦 Code Implementation:
+js
+Copy
+Edit
+const LinkedList = require('./LinkedListwithTailNode')
+
+class LinkedListStack {
+    constructor() {
+        this.list = new LinkedList()
+    }
+
+    push(value) {
+        this.list.prepend(value)
+    }
+
+    pop() {
+        return this.list.removeFromFront()
+    }
+
+    peek() {
+        return this.list.head.value 
+    }
+
+    isEmpty() {
+        return this.list.isEmpty()
+    }
+
+    getSize() {
+        return this.list.getSize()
+    }
+
+    print() {
+        return this.list.print()
+    }
+}
+🧪 Sample Output:
+js
+Copy
+Edit
+const stack = new LinkedListStack()
+console.log(stack.isEmpty())  // true
+
+stack.push(20)
+stack.push(10)
+stack.push(40)
+stack.push(30)
+
+console.log(stack.getSize())  // 4
+stack.print()                 // 30 -> 40 -> 10 -> 20 -> null
+
+console.log(stack.pop())      // 30
+console.log(stack.peek())     // 40
+🔁 Stacks are widely used in:
+
+Undo/Redo functionality
+
+Browser history
+
+Function call stack
+
+Expression evaluation (parsing, recursion, etc.)
+
+Feeling more confident as I build these core fundamentals one step at a time. 💪
+Next up: Queues!
+
+#100DaysOfCode #DSA #JavaScript #Stack #LinkedList #FrontendDev #WebDevelopment #CodingJourney #DevCommunity #LearnInPublic

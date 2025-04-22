@@ -1,0 +1,64 @@
+// 🗓️ Day 28 of #100DaysOfDSA
+// Hey LinkedIn 👋
+
+// Today, I explored how to remove a node by its value from a Linked List in JavaScript!
+
+// 🧠 What I Learned:
+// Previously, I had implemented removing a node by its index using removeAtIndex(index).
+
+// Now, I’ve implemented removeValue(value) – which searches for the first node matching the value and removes it from the list.
+
+// 💡 Why is this useful?
+// Removing by value is helpful in real-world scenarios when you don’t know the exact index, but you do know what data you’re trying to remove.
+
+// 💻 Code Snapshot
+// js
+// Copy
+// Edit
+// removeValue(value){
+//     if (this.isEmpty()) return null;
+
+//     if (this.head.value === value) {
+//         this.head = this.head.next;
+//         this.size--;
+//         return value;
+//     } else {
+//         let prev = this.head;
+//         while (prev.next && prev.next.value !== value) {
+//             prev = prev.next;
+//         }
+
+//         if (prev.next) {
+//             const removedNode = prev.next;
+//             prev.next = removedNode.next;
+//             this.size--;
+//             return value;
+//         }
+
+//         return null;
+//     }
+// }
+// ✅ Sample Usage
+// js
+// Copy
+// Edit
+// const list = new LinkedList();
+// list.prepend(10);
+// list.prepend(20);
+// list.insert(90, 0);
+// list.append(40);
+// list.append(50);
+
+// console.log('Removed by index:', list.removeAtIndex(3));  // Removes 10
+// console.log('Removed by value:', list.removeValue(20));   // Removes 20
+
+// list.print();  // Output: 90 → 40 → 50
+// 🧠 Time Complexity:
+
+// Method	Time Complexity
+// removeAtIndex()	O(n)
+// removeValue()	O(n)
+// On to the next operation tomorrow 🔥
+// Let’s keep leveling up!
+
+// #100DaysOfCode #JavaScript #DataStructures #LinkedList #removeValue #WebDevelopment #DSA #CodingJourney #LearningInPublic #CodeNewbie #DevCommunity

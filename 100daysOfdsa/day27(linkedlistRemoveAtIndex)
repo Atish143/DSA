@@ -1,0 +1,129 @@
+🗓️ Day 27 of #100DaysOfDSA
+Hey LinkedIn fam! 👋
+
+Today, I explored something super important in Linked Lists:
+🧹 Removing a node by index!
+
+🚀 What’s New?
+In addition to prepend, append, and insert, I’ve now implemented the remove(index) method!
+
+🔧 This function helps delete a node from a specific position in the linked list — whether it’s the head, middle, or tail.
+
+💻 Code Snippet
+js
+Copy
+Edit
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  getSize() {
+    return this.size;
+  }
+
+  prepend(value) {
+    const node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+    this.size++;
+  }
+
+  append(value) {
+    const node = new Node(value);
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      let prev = this.head;
+      while (prev.next) {
+        prev = prev.next;
+      }
+      prev.next = node;
+    }
+    this.size++;
+  }
+
+  insert(value, index) {
+    if (index < 0 || index > this.size) return;
+
+    if (index === 0) {
+      this.prepend(value);
+    } else {
+      const node = new Node(value);
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      node.next = prev.next;
+      prev.next = node;
+      this.size++;
+    }
+  }
+
+  remove(index) {
+    if (index < 0 || index >= this.size) return null;
+
+    let removedNode;
+    if (index === 0) {
+      removedNode = this.head;
+      this.head = this.head.next;
+    } else {
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      removedNode = prev.next;
+      prev.next = removedNode.next;
+    }
+
+    this.size--;
+    return removedNode.value;
+  }
+
+  print() {
+    let current = this.head;
+    while (current) {
+      console.log(current.value);
+      current = current.next;
+    }
+  }
+}
+✅ Sample Usage
+js
+Copy
+Edit
+const list = new LinkedList();
+list.prepend(10);
+list.prepend(20);
+list.insert(90, 0);
+list.append(40);
+list.append(50);
+
+console.log('Removed:', list.remove(3));  // removes 10
+list.print();  // Output: 90 -> 20 -> 40 -> 50
+🧠 Time Complexity
+
+Operation	Time Complexity
+remove(index)	O(n) (due to traversal)
+prepend()	O(1)
+append()	O(n)
+insert()	O(n)
+🔍 Why this matters?
+Mastering removal operations is essential for building efficient dynamic data structures and prepping for coding interviews!
+
+Next up: exploring searching and updating nodes in a linked list. 🔍🛠️
+
+Let’s keep building! 💪
+#100DaysOfCode #DataStructures #JavaScript #LinkedList #CodingJourney #DSA #LearningInPublic #WebDevelopment #TechCommunity #CodeNewbie

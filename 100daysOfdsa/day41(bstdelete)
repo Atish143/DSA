@@ -1,0 +1,56 @@
+🚀 Day 41 of #100DaysOfDSA
+📘 Today I learned how to delete a node in a Binary Search Tree (BST)! 🗑🌳
+
+After exploring insertion, traversal, and min/max operations, I tackled the most challenging but crucial part of BSTs — deletion.
+Deletion requires careful handling to preserve the binary search tree structure.
+
+🔧 Three Deletion Scenarios:
+Leaf Node (No children) → Just remove it.
+
+One Child → Replace the node with its child.
+
+Two Children → Replace the node with its in-order successor (smallest value in the right subtree), and delete the successor recursively.
+
+✅ JavaScript Implementation:
+javascript
+Copy
+Edit
+delete(value) {
+    this.root = this.deleteNode(this.root, value);
+}
+
+deleteNode(root, value) {
+    if (root === null) return null;
+
+    if (value < root.value) {
+        root.left = this.deleteNode(root.left, value);
+    } else if (value > root.value) {
+        root.right = this.deleteNode(root.right, value);
+    } else {
+        // Case 1: No child
+        if (!root.left && !root.right) return null;
+        // Case 2: One child
+        if (!root.left) return root.right;
+        if (!root.right) return root.left;
+        // Case 3: Two children
+        root.value = this.min(root.right);
+        root.right = this.deleteNode(root.right, root.value);
+    }
+
+    return root;
+}
+🌱 Example:
+javascript
+Copy
+Edit
+bst.insert(10);
+bst.insert(5);
+bst.insert(15);
+bst.insert(3);
+bst.delete(3); // Deletes leaf node
+🧠 Bonus:
+Used the same min() method to find the in-order successor while deleting nodes with two children.
+
+BSTs are really teaching me how to handle edge cases and think recursively. Loving every bit of this journey! 🙌
+
+#100DaysOfCode #BinarySearchTree #DSA #JavaScript #DeleteMethod #Recursion #WebDev #CodingJourney #LearningInPublic #Developer

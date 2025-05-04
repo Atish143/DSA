@@ -1,0 +1,79 @@
+// 👋 Hello LinkedIn Fam!
+// 🗓 Day 36 of #100DaysOfDSA — and today I dived deeper into Binary Search Trees (BST) 🌳
+
+// 🔍 What I Learned:
+// I implemented the insert operation in a Binary Search Tree using JavaScript.
+
+// 🧠 How it works:
+
+// A BST is a binary tree where:
+
+// Left subtree contains values less than the parent node.
+
+// Right subtree contains values greater than or equal to the parent node.
+
+// The insert() method places new values in the correct position to maintain this structure.
+
+// 💻 Code:
+// js
+// Copy
+// Edit
+// class Node {
+//     constructor(value) {
+//         this.value = value;
+//         this.left = null;
+//         this.right = null;
+//     }
+// }
+
+// class BinarySearchTree {
+//     constructor(){
+//         this.root = null;
+//     }
+
+//     isEmpty(){
+//         return this.root === null;
+//     }
+
+//     insert(value){
+//         const newNode = new Node(value);
+//         if (this.isEmpty()) {
+//             this.root = newNode;
+//         } else {
+//             this.insertNode(this.root, newNode);
+//         }
+//     }
+
+//     insertNode(root, newNode){
+//         if (newNode.value < root.value) {
+//             if (root.left === null) {
+//                 root.left = newNode;
+//             } else {
+//                 this.insertNode(root.left, newNode);
+//             }
+//         } else {
+//             if (root.right === null) {
+//                 root.right = newNode;
+//             } else {
+//                 this.insertNode(root.right, newNode);
+//             }
+//         }
+//     }
+// }
+
+// const bst = new BinarySearchTree();
+// console.log("Tree is empty:", bst.isEmpty()); // true
+// bst.insert(10);
+// bst.insert(5);
+// bst.insert(15);
+// ⏱ Time Complexity:
+// Best/Average Case (Balanced Tree):
+// O(log n) — Each level cuts the search space in half.
+
+// Worst Case (Skewed Tree):
+// O(n) — When inserted values are already sorted (like a linked list).
+
+// 🌱 Up next, I’ll explore BST traversals (inorder, preorder, postorder).
+// Grateful for every line of code I'm writing 🙌
+
+// #100DaysOfCode #DSA #JavaScript #BinarySearchTree #CodeNewbie #LearningInPublic #DevJourney #WebDevelopment

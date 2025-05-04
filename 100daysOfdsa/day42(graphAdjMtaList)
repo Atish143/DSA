@@ -1,0 +1,71 @@
+🚀 Day 42 of #100DaysOfDSA
+📘 Today I learned about Graph Representation using Adjacency Matrix and Adjacency List 🔗📊
+
+Graphs are a key data structure for modeling networks like social media, maps, or web pages. Today I focused on two ways to represent graphs:
+
+🔹 1. Adjacency Matrix
+A 2D array where matrix[i][j] = 1 means there is an edge from node i to node j.
+
+📘 Example:
+Graph:
+
+lua
+Copy
+Edit
+0 -- 1  
+|    |  
+2 -- 3
+💡 Matrix:
+csharp
+Copy
+Edit
+[
+  [0, 1, 1, 0],
+  [1, 0, 0, 1],
+  [1, 0, 0, 1],
+  [0, 1, 1, 0]
+]
+✅ Good for dense graphs
+❌ Takes O(V²) space
+
+🔹 2. Adjacency List
+Each node stores a list of its neighbors.
+
+📘 Example:
+javascript
+Copy
+Edit
+{
+  0: [1, 2],
+  1: [0, 3],
+  2: [0, 3],
+  3: [1, 2]
+}
+✅ Efficient for sparse graphs
+❌ Slower edge lookup than matrix
+
+📌 JavaScript Implementation:
+javascript
+Copy
+Edit
+// Adjacency List
+const graph = {
+  0: [1, 2],
+  1: [0, 3],
+  2: [0, 3],
+  3: [1, 2]
+};
+
+// Adjacency Matrix
+const matrix = [
+  [0, 1, 1, 0],
+  [1, 0, 0, 1],
+  [1, 0, 0, 1],
+  [0, 1, 1, 0]
+];
+🌱 Key Takeaway:
+Use Adjacency List for memory efficiency when the graph is sparse.
+
+Use Adjacency Matrix when you need fast edge lookups and the graph is dense.
+
+#100DaysOfCode #Graph #DSA #JavaScript #LearningInPublic #DeveloperJourney #AdjacencyList #AdjacencyMatrix #TechLinkedIn

@@ -1,0 +1,108 @@
+// 👋 Hello LinkedIn Fam!
+// 🗓 Day 34 of #100DaysOfDSA — and today I explored the powerful Hash Table Data Structure in JavaScript! 🔑📦
+
+// 🚀 What I Built:
+// A custom Hash Table class from scratch that supports:
+
+// ✅ Insertion (insert(key, value))
+// ✅ Retrieval (get(key))
+// ✅ Deletion (remove(key))
+// ✅ Collision handling using chaining (arrays inside buckets)
+// ✅ Utility methods like display(), clear(), and isEmpty()
+
+// 💡 Why Hash Tables?
+// Hash Tables provide O(1) average-case time complexity for insert, get, and remove operations. They’re used in:
+
+// Caching
+
+// Symbol tables in compilers
+
+// Fast lookups (like finding users by ID or name)
+
+// Map, Set data types in JS & many languages
+
+// 💻 Code Snapshot:
+// js
+// Copy
+// Edit
+// class hashTable {
+//     constructor(size) {
+//         this.size = size;
+//         this.table = new Array(size);
+//     }
+
+//     hashKey(key) {
+//         let hash = 0;
+//         for (let i = 0; i < key.length; i++) {
+//             hash += key.charCodeAt(i) * i;
+//         }
+//         return hash % this.size;
+//     }
+
+//     insert(key, value) {
+//         const index = this.hashKey(key);
+//         if (!this.table[index]) this.table[index] = [];
+//         this.table[index].push([key, value]);
+//     }
+
+//     get(key) {
+//         const index = this.hashKey(key);
+//         const bucket = this.table[index];
+//         if (bucket) {
+//             for (let [k, v] of bucket) {
+//                 if (k === key) return v;
+//             }
+//         }
+//         return undefined;
+//     }
+
+//     remove(key) {
+//         const index = this.hashKey(key);
+//         const bucket = this.table[index];
+//         if (bucket) {
+//             for (let i = 0; i < bucket.length; i++) {
+//                 if (bucket[i][0] === key) {
+//                     const value = bucket[i][1];
+//                     bucket.splice(i, 1);
+//                     return value;
+//                 }
+//             }
+//         }
+//         return undefined;
+//     }
+
+//     display() {
+//         this.table.forEach((item, index) => {
+//             if (item) console.log(`${index}: ${item}`);
+//         });
+//     }
+
+//     clear() {
+//         this.table = new Array(this.size);
+//     }
+
+//     isEmpty() {
+//         return this.table.every(bucket => !bucket);
+//     }
+// }
+// 🧪 Sample Output:
+// js
+// Copy
+// Edit
+// const table = new hashTable(10);
+
+// table.insert('name', 'John');
+// table.insert('age', 30);
+// table.insert('city', 'New York');
+
+// table.display();
+// // Output might be something like:
+// // 2: [ [ 'city', 'New York' ] ]
+// // 5: [ [ 'name', 'John' ] ]
+// // 7: [ [ 'age', 30 ] ]
+
+// console.log(table.get('name')); // John
+// 💬 Every data structure I build gives me a deeper understanding of how things work under the hood. Hash tables are everywhere — and now I know why!
+
+// Onwards and upwards! 🧠⚙️
+// #100DaysOfCode #JavaScript #DataStructures #HashTable #DevJourney #LearningInPublic #WebDevelopment #CodingDaily #TechCommunity #DSA

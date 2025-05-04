@@ -1,0 +1,85 @@
+👋 Hello LinkedIn Fam!
+🗓 Day 33 of #100DaysOfDSA — and today I learned the Queue Data Structure using a Linked List in JavaScript! 🚌📦
+
+Queues follow the FIFO (First In, First Out) principle.
+I implemented a queue using a linked list where:
+
+enQueue() adds to the tail
+
+deQueue() removes from the head
+
+This makes both operations super efficient with O(1) time complexity. ⚡
+
+✅ What I Learned:
+Queue operations: enQueue(), deQueue(), peek()
+
+Efficiently managed using a linked list (no shifting like arrays!)
+
+Perfect for real-world problems like scheduling, messaging systems, and more!
+
+💻 Code Snapshot:
+js
+Copy
+Edit
+const LinkedList = require('./LinkedListwithTailNode')
+
+class LinkedListQueue {
+    constructor() {
+        this.list = new LinkedList()
+    }
+
+    enQueue(value){
+        this.list.append(value)
+    }
+
+    deQueue(){
+      return this.list.removeFromFront()
+    }
+
+    peek() {
+        return this.list.head.value 
+    }
+
+    isEmpty() {
+        return this.list.isEmpty()
+    }
+
+    getSize() {
+        return this.list.getSize()
+    }
+
+    print() {
+        return this.list.print()
+    }
+}
+🧪 Sample Output:
+js
+Copy
+Edit
+const queue = new LinkedListQueue()
+console.log(queue.isEmpty())  // true
+
+queue.enQueue(10)
+queue.enQueue(20)
+queue.enQueue(30)
+queue.enQueue(40)
+
+console.log(queue.getSize())  // 4
+queue.print()                 // 10 -> 20 -> 30 -> 40 -> null
+
+console.log(queue.deQueue())  // 10
+console.log(queue.peek())     // 20
+📌 Use Cases of Queues:
+
+Order processing
+
+Task scheduling
+
+Print queue
+
+Real-time messaging systems
+
+Every line of code is making my fundamentals stronger 💪
+Let’s keep pushing forward — tomorrow’s lesson: circular queues or doubly linked lists maybe? 😄
+
+#100DaysOfCode #DSA #JavaScript #Queue #LinkedList #WebDevelopment #CodingJourney #DevCommunity #LearnInPublic #TechLearner

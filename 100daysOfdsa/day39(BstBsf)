@@ -1,0 +1,50 @@
+🚀 Day 39 of #100DaysOfDSA
+📘 Today I learned about Level Order Traversal in Binary Search Trees! 🌳
+
+In addition to PreOrder, InOrder, and PostOrder traversal methods, today I explored another important tree traversal technique — Level Order Traversal, also known as Breadth-First Search (BFS).
+
+Instead of going deep into one subtree first, Level Order Traversal visits nodes level by level, left to right, using a queue data structure.
+
+🔧 Here's a snippet of what I built in JavaScript:
+javascript
+Copy
+Edit
+levelOrder(){
+    const queue = [];
+    queue.push(this.root);
+
+    while(queue.length){
+        let curr = queue.shift();
+        console.log(curr.value);
+
+        if(curr.left){
+            queue.push(curr.left);
+        }
+        if(curr.right){
+            queue.push(curr.right);
+        }
+    }
+}
+🧠 Example Output:
+For this BST:
+
+markdown
+Copy
+Edit
+        10
+       /  \
+      5   15
+     / \
+    3   7
+Level Order traversal prints: 10, 5, 15, 3, 7
+
+⏱ Time & Space Complexity:
+Time: O(n) — every node is visited once
+
+Space: O(n) — in worst case, all nodes could be in the queue
+
+I'm finding trees to be super interesting now that I understand how these traversal methods work — they're the foundation of many real-world applications like compilers, parsers, and search algorithms.
+
+Excited to continue this journey tomorrow!
+
+#100DaysOfCode #JavaScript #BinarySearchTree #BFS #LevelOrderTraversal #WebDev #DSA #CodingJourney #LearningInPublic #Developer

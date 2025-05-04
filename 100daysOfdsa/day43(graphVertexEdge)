@@ -1,0 +1,62 @@
+🚀 Day 43 of #100DaysOfDSA
+📘 Today I learned about Vertices and Edges in Graphs using JavaScript 🧠📈
+
+A graph is made up of vertices (nodes) and edges (connections) between them. This structure is essential in computer science for modeling networks like maps, social connections, and more.
+
+🔹 Key Concepts:
+Vertex: A point or node in the graph (e.g., A, B, C).
+
+Edge: A connection between two vertices.
+
+📌 JavaScript Implementation using Adjacency List:
+javascript
+Copy
+Edit
+class Graph {
+    constructor() {
+        this.adjacencyList = {};
+    }
+
+    addVertex(vertex) {
+        if (!this.adjacencyList[vertex]) {
+            this.adjacencyList[vertex] = new Set();
+        }
+    }
+
+    addEdge(vertex1, vertex2) {
+        this.addVertex(vertex1);
+        this.addVertex(vertex2);
+        this.adjacencyList[vertex1].add(vertex2);
+        this.adjacencyList[vertex2].add(vertex1);
+    }
+}
+
+// Example
+const graph = new Graph();
+
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+
+graph.addEdge("A", "B");
+graph.addEdge("B", "C");
+
+console.log(graph.adjacencyList);
+💡 Output:
+javascript
+Copy
+Edit
+{
+  A: Set { 'B' },
+  B: Set { 'A', 'C' },
+  C: Set { 'B' }
+}
+✅ What I learned:
+How to represent undirected graphs using adjacency lists.
+
+How to dynamically add vertices and edges in a graph.
+
+Using JavaScript Set to avoid duplicate connections.
+
+#100DaysOfCode #GraphTheory #DSA #JavaScript #LearningInPublic #TechLinkedIn #DeveloperJourney #DataStructures
+

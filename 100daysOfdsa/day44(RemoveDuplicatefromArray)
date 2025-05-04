@@ -1,0 +1,46 @@
+// ✅ Day 44 of #100DaysOfDSA
+// 🧠 Today I solved a classic problem from Leetcode: "Remove Duplicates from Sorted Array"
+// Understanding the problem was key before diving into the code.
+
+// 💡 Problem Statement:
+// Given a sorted array, remove duplicates in-place, such that each unique element appears only once, and return the new length k.
+
+// Constraints:
+
+// Do not use extra space.
+
+// Keep the relative order of elements the same.
+
+// ✍️ JavaScript Solution:
+// javascript
+// Copy
+// Edit
+// var removeDuplicates = function(nums) {
+//     if (nums.length === 0) return 0;
+
+//     let i = 0; // Pointer for placing next unique element
+//     for (let j = 1; j < nums.length; j++) {
+//         if (nums[j] !== nums[i]) {
+//             i++;
+//             nums[i] = nums[j];
+//         }
+//     }
+
+//     return i + 1; // Total unique elements
+// };
+// 🔍 Example:
+// Input:
+// [0,0,1,1,1,2,2,3,3,4]
+// Output:
+// 5, nums = [0,1,2,3,4,_,_,_,_,_]
+
+// 🧩 What I Learned:
+// Importance of two-pointer approach in array manipulation.
+
+// How to modify arrays in-place without using extra space.
+
+// How crucial it is to understand problem constraints before coding.
+
+// On to the next one! 💪
+
+// #100DaysOfCode #Leetcode #DSA #JavaScript #ProblemSolving #LearningInPublic #DeveloperJourney #LinkedInCoding

@@ -1,0 +1,53 @@
+🚀 Day 40 of #100DaysOfDSA
+📘 Today I learned how to find the Minimum and Maximum values in a Binary Search Tree (BST)! 🌲
+
+After learning different types of traversals and BFS (Level Order), I dove deeper into retrieving the smallest and largest values in a BST, which is super efficient thanks to the tree’s inherent structure.
+
+🔍 Key Concept:
+The minimum value in a BST lies in the leftmost node.
+
+The maximum value in a BST lies in the rightmost node.
+
+🔧 Here's the JavaScript code I wrote:
+javascript
+Copy
+Edit
+min(root){
+    if(!root.left){
+        return root.value;
+    } else {
+        return this.min(root.left);
+    }
+}
+
+max(root){
+    if(!root.right){
+        return root.value;
+    } else {
+        return this.max(root.right);
+    }
+}
+✅ Example:
+For this BST:
+
+markdown
+Copy
+Edit
+        10
+       /  \
+      5   15
+     / \
+    3   7
+min() returns 3
+
+max() returns 15
+
+⏱ Time Complexity:
+Best/Average Case: O(log n)
+
+Worst Case (skewed tree): O(n)
+
+Loving how clear and logical tree operations become once you understand their structure! On to deletion operations next. 💻
+
+#100DaysOfCode #BinarySearchTree #DSA #JavaScript #MinMax #WebDev #CodingJourney #LearningInPublic #Developer
+

@@ -1,0 +1,46 @@
+👋 Hello LinkedIn Fam!
+🗓 Day 35 of #100DaysOfDSA — and today I stepped into the world of Binary Search Trees (BST) 🌳✨
+
+🔍 What I Learned:
+A Binary Search Tree is a type of binary tree where:
+
+Every node has at most two children – left and right.
+
+The left child contains values less than the parent, and
+
+The right child contains values greater than the parent.
+
+This structure allows for efficient search, insert, and delete operations — all in O(log n) time (in a balanced BST).
+
+🛠️ What I Built:
+I wrote a simple BinarySearchTree class with an initial check to see if the tree is empty.
+
+💻 Code Snapshot:
+js
+Copy
+Edit
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class BinarySearchTree {
+    constructor() {
+        this.root = null;
+    }
+
+    isEmpty() {
+        return this.root === null;
+    }
+}
+
+const bst = new BinarySearchTree();
+console.log("Tree is empty:", bst.isEmpty()); // true
+🧠 This is just the beginning! Next, I'll be adding insert, search, traversal (inorder, preorder, postorder), and delete methods to this tree.
+
+Let’s keep building. More updates coming soon! 🚀
+
+#100DaysOfCode #JavaScript #BinarySearchTree #DataStructures #DSA #CodingJourney #LearningInPublic #TechCommunity #WebDevelopment #CodeNewbie #DevDiary

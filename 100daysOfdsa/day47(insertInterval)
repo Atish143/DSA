@@ -1,0 +1,62 @@
+// 📅 Day 47 of hashtag#100DaysOfDSA
+// 🧩 Tackled the "Insert Interval" problem today!
+ 
+// This one was all about mastering interval merging and boundary conditions.
+
+
+// 💡 Problem Statement:
+// You're given a list of non-overlapping intervals, sorted by start time.
+ 
+// You need to insert a new interval and return the updated list while still keeping it:
+// Sorted
+// Non-overlapping (by merging if needed)
+
+
+// 📝 Example:
+//  Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
+//  Output: [[1,5],[6,9]]
+
+
+// ⚙️ JavaScript Solution:
+// var insert = function(intervals, newInterval) {
+//  let result = [];
+//  let i = 0;
+//  const n = intervals.length;
+
+//  // Step 1: Add intervals before newInterval
+//  while (i < n && intervals[i][1] < newInterval[0]) {
+//  result.push(intervals[i]);
+//  i++;
+//  }
+
+//  // Step 2: Merge overlapping intervals
+//  while (i < n && intervals[i][0] <= newInterval[1]) {
+//  newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
+//  newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+//  i++;
+//  }
+//  result.push(newInterval);
+
+//  // Step 3: Add remaining intervals
+//  while (i < n) {
+//  result.push(intervals[i]);
+//  i++;
+//  }
+
+//  return result;
+// };
+
+
+// 🧠 Key Learnings:
+// Merge logic requires handling overlaps carefully.
+// Avoid in-place modification unless necessary.
+// Efficient traversal using sorted properties = better performance.
+
+
+// These types of interval problems sharpen logic and edge case handling 🔍
+//  Have you tried a tricky interval problem recently? Share your experience in the comments 👇
+
+
+// hashtag#100DaysOfCode hashtag#LeetCode hashtag#DSA hashtag#Coding hashtag#JavaScript hashtag#ProblemSolving hashtag#FrontendDev hashtag#TechJourney hashtag#InsertInterval hashtag#CodeNewbie hashtag#LinkedInCoding
+// lovelike
+// 2

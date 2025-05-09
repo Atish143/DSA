@@ -1,0 +1,57 @@
+✅ Day 45 of hashtag#100DaysOfDSA
+🧠 Tackled a classic problem today: "3Sum" from LeetCode
+
+
+ The goal: Find unique triplets in an array that sum to zero.
+
+
+💡 Problem Statement:
+Given an array nums, return all the unique triplets [nums[i], nums[j], nums[k]] such that:
+i ≠ j ≠ k
+nums[i] + nums[j] + nums[k] == 0
+Duplicates must be avoided in the final result.
+
+
+⚙️ JavaScript Solution:
+function threeSum(nums) {
+ const result = [];
+ nums.sort((a, b) => a - b); // Sort array
+
+ for (let i = 0; i < nums.length - 2; i++) {
+ if (i > 0 && nums[i] === nums[i - 1]) continue; // Skip duplicates
+
+ let left = i + 1;
+ let right = nums.length - 1;
+
+ while (left < right) {
+ const sum = nums[i] + nums[left] + nums[right];
+
+ if (sum === 0) {
+ result.push([nums[i], nums[left], nums[right]]);
+ while (nums[left] === nums[left + 1]) left++; // Skip duplicates
+ while (nums[right] === nums[right - 1]) right--;
+ left++;
+ right--;
+ } else if (sum < 0) {
+ left++; // Increase sum
+ } else {
+ right--; // Decrease sum
+ }
+ }
+ }
+
+ return result;
+}
+
+
+🧠 Key Concepts Learned:
+Efficient two-pointer approach after sorting the array.
+Handling duplicates carefully to maintain uniqueness.
+Importance of optimizing brute-force problems.
+
+
+One step closer to mastering problem-solving! 🚀
+ Drop your favorite array problem in the comments 👇
+
+
+hashtag#100DaysOfCode hashtag#Leetcode hashtag#JavaScript hashtag#DSA hashtag#CodingChallenge hashtag#DeveloperJourney hashtag#LinkedInCoding hashtag#3Sum hashtag#TwoPointers

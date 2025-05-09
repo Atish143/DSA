@@ -1,0 +1,47 @@
+// 🔁 Day 46 of hashtag#100DaysOfDSA
+// 📐 Solved the Zigzag Conversion problem today!
+//  This one really made me think about pattern traversal and direction control.
+
+
+// 💡 Problem Statement:
+// Given a string and a number of rows, convert the string into a zigzag pattern and then read it line by line.
+
+
+// 📝 For example,
+//  Input: "PAYPALISHIRING", numRows = 3
+//  Zigzag form:
+// P A H N 
+// A P L S I I G 
+// Y I R
+// Output: "PAHNAPLSIIGYIR"
+
+
+// ⚙️ JavaScript Solution:
+// var convert = function(s, numRows) {
+//  if (numRows === 1 || s.length <= numRows) return s;
+
+//  const rows = Array.from({ length: numRows }, () => "");
+//  let currentRow = 0;
+//  let goingDown = false;
+
+//  for (let char of s) {
+//  rows[currentRow] += char;
+//  if (currentRow === 0 || currentRow === numRows - 1) goingDown = !goingDown;
+//  currentRow += goingDown ? 1 : -1;
+//  }
+
+//  return rows.join("");
+// };
+
+
+// 🧠 Key Takeaways:
+// Zigzag traversal simulates movement up and down rows.
+// Great practice for string manipulation and flow control.
+// The concept of toggling direction (goingDown) was critical.
+// One more algorithm cracked, one step closer to mastery! 🧩
+
+
+//  If you’ve faced any string-related challenges recently, share them below ⬇️
+
+
+// hashtag#100DaysOfCode hashtag#Leetcode hashtag#JavaScript hashtag#CodingJourney hashtag#ProblemSolving hashtag#ZigzagConversion hashtag#DSA hashtag#CodeNewbie hashtag#FrontendEngineering hashtag#LinkedInCoding

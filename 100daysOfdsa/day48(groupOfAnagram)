@@ -1,0 +1,46 @@
+// 🧠 Day 48 of hashtag#100DaysOfDSA
+// 🚀 Cracked the "Group Anagrams" problem today — a beautiful combination of string manipulation and hash maps!
+
+
+// 💡 Problem Statement:
+// Given a list of strings, group all anagrams together.
+// 📌 Anagram = words that have the same characters in a different order.
+//  Example: "eat", "tea", "ate" are all anagrams of each other.
+// 📝 Input: ["eat","tea","tan","ate","nat","bat"]
+//  🔁 Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+// ⚙️ JavaScript Solution:
+// var groupAnagrams = function(strs) {
+//  const map = {};
+
+//  for (let str of strs) {
+//  // Sort characters to form the key
+//  const sorted = str.split('').sort().join('');
+
+//  // Use the sorted key to group anagrams
+//  if (!map[sorted]) {
+//  map[sorted] = [];
+//  }
+//  map[sorted].push(str);
+//  }
+
+//  // Return the grouped arrays
+//  return Object.values(map);
+// };
+
+
+// 🔍 Key Concepts:
+// Using a sorted string as a key ensures that anagrams map to the same group.
+
+// Object.values(map) gives the final grouped result.
+// Efficient solution using O(n * k log k) time complexity, where k is the average length of strings.
+
+
+// Grouping anagrams was fun! 💡
+//  It's one of those problems that teach you how a small trick (like sorting a string) can lead to a powerful solution.
+
+
+// Have you solved this one before? What approach did you take?
+
+
+// hashtag#100DaysOfCode hashtag#LeetCode hashtag#JavaScript hashtag#DSA hashtag#CodingJourney hashtag#GroupAnagrams hashtag#ProblemSolving hashtag#TechCommunity hashtag#FrontendDeveloper hashtag#CodeNewbie hashtag#LinkedInCoding
